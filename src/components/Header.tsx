@@ -11,7 +11,7 @@ import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
   timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
+  locale?: string;
 };
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
@@ -72,6 +72,7 @@ export const Header = () => {
             padding="4"
             horizontal="center"
             zIndex={1}
+            style={{ direction: "rtl", flexDirection: "row-reverse" }} // ✅ هذا هو التعديل الجديد
           >
             <Flex gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (

@@ -1,79 +1,76 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "محمد",
+  lastName: "العربي",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "مدير إبداعي ومطور براندات",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "dr.al3rbi@gmail.com",
+  location: "Asia/Riyadh",
+  languages: ["العربية", "الإنجليزية"],
 };
 
 const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  display: false,
+  title: <>اشترك في النشرة البريدية الخاصة بـ {person.firstName}</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      أشارك محتوى حصري عن بناء البراندات، استراتيجيات التسويق، وتجارب من عملي كمبدع مستقل.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/moalarbi",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://linkedin.com/in/moal3rbi",
   },
   {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
   },
+  {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/966537311886",
+  },
 ];
 
 const home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "الرئيسية",
+  title: `${person.name} | ${person.role}`,
+  description: `موقع يعرض أعمال ${person.name} في تطوير البراندات وتصميم الهويات.`,
+  headline: <>نحوّل الأفكار إلى هويات تبقى في الذاكرة</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>أحدث المشاريع: <strong className="ml-4">Fada Veil</strong></>,
+    href: "/work/fada-veil-launch",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      أنا محمد، أعمل كمدير إبداعي في <strong>إمدادات العطاء</strong>، وأبني أنظمة متكاملة للمتاجر الإلكترونية.
+      <br /> أدمج بين التصميم، التطوير، والتسويق لخلق تجربة عميل متكاملة.
     </>
   ),
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "من أنا",
+  title: `عن ${person.name}`,
+  description: `تعرف على ${person.name}، ${person.role} من ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -82,115 +79,78 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "نبذة تعريفية",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        محمد العربي، مدير إبداعي من السعودية. ساعدت أكثر من 30 علامة تجارية على بناء وجود رقمي قوي.
+        <br /> أعمل بشغف على تحويل الأفكار إلى مشاريع ناجحة تمزج بين التصميم والتقنية.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "الخبرات العملية",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "إمدادات العطاء",
+        timeframe: "2024 - الآن",
+        role: "مدير إبداعي",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>قيادة تطوير هوية تطبيق جولدن الترا بالكامل.</>,
+          <>إطلاق حملات تسويقية ساعدت في الوصول إلى 19,000 عميل خلال 4 أشهر.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/golden-ultra.jpg",
+            alt: "Golden Ultra Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Freelance",
+        timeframe: "2016 - 2023",
+        role: "مصمم ومطور حر",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>خدمة أكثر من 20 متجر إلكتروني في السعودية.</>,
+          <>بناء هويات براند احترافية لمشاريع ناشئة وتحقيق نتائج فعلية.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "الدراسة",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "جامعة الزقازيق",
+        description: <>بكالوريوس إعلام – دفعة 2020</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "شهادة المصمم العربي",
+        description: <>من أكاديمية محمد رج – تصميم البراندات</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "المهارات التقنية",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Adobe Suite",
+        description: <>فوتوشوب، اليستريتور، بريمير، أفتر إفكتس – تصميم احترافي لهويات بصرية.</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Next.js & Webflow",
+        description: <>بناء مواقع مخصصة وسريعة باستخدام Next.js وWebflow.</>,
+        images: [],
       },
     ],
   },
@@ -198,68 +158,37 @@ const about = {
 
 const blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "المدونة",
+  title: "أكتب عن التجارة الإلكترونية والتصميم",
+  description: `اطلع على أفكار وتجارب ${person.name} في عالم البراندات.`,
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "أعمالي",
+  title: `مشاريعي – ${person.name}`,
+  description: `أعمال تصميم وتطوير قام بها ${person.name}.`,
 };
 
 const gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  label: "المعرض",
+  title: `معرض الصور – ${person.name}`,
+  description: `مجموعة من الصور والمشاريع التي عمل عليها ${person.name}`,
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      src: "/images/gallery/fada-veil.jpg",
+      alt: "مشروع Fada Veil",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      src: "/images/gallery/golden-ultra.jpg",
+      alt: "مشروع Golden Ultra",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
+      src: "/images/gallery/branding.jpg",
+      alt: "تصميم هوية",
       orientation: "vertical",
     },
   ],
